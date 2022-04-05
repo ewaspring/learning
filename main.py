@@ -387,6 +387,7 @@ print (num)
 n = 'sjdkfjjdskhsjk'
 print (len(n))
 
+<<<<<<< HEAD
 
 #2月16日 学习心得
 
@@ -418,3 +419,439 @@ yen = lambda x:x/0.06052
 print (dollar(10000))
 print (pound(10000))
 print (yen(10000))
+=======
+# 2-19 practice
+
+#类
+class Dog:
+    def __init__(self, DogName):
+        self.DogName = DogName
+
+    def print_DogName(self):
+        print(self.DogName)
+
+#定义旺财
+class Dog:
+    def __init__(self, DogName):
+        self.name = DogName
+
+    def print_DogName(self):
+        print(self.name)
+
+wangcai = Dog("wangcai")
+wangcai.print_DogName()
+
+#2-23 practice
+
+#class 定义Tony最高分
+class student:
+    def __init__(self, name, age, score):
+        self.name = name
+        self.age = age
+        self.score = score
+
+    def get_score(self):
+        return max(self.score)
+
+
+Tony = student('Tony', 20, [69, 88, 100])
+print(Tony.get_score())
+
+# 杯子容积反值
+class bottle:
+    def __init__(self, capacity):
+        self.capacity = capacity
+
+    def introduce(self):
+        return self.capacity
+
+a = bottle(600)
+print(a.introduce())
+
+# 定义食物热量
+class food:
+    def __init__(self,caloric):
+        self.caloric = caloric
+    def introduce(self):
+        return self.caloric
+
+a = food('200')
+print (a.introduce())
+
+#选股票 values
+shares = { 'IBM':36.6,
+    'Lenovo':23.2,
+    'oldboy':21.2,
+    'ocean':10.2
+}
+
+m = max(shares.values())
+print(m)
+
+# emmm...
+print ('''原本，
+我以为，
+对其他人渣，
+无心撩完就跑，
+对任何事情都不说清楚，
+能够懂事，
+和点到为止，
+只是我的一种社交风格，
+只是证明我不够喜欢她，
+我可以转头就忘，
+也可以说放下就放下，
+哪怕下一秒就不联系，
+我也从不怕失去。
+
+我以为，
+真正喜欢一个人，
+就是甩开双子座渣的套路，
+就是毫无心机的全盘托出，
+就是展现我的真心和态度，
+就是毫无顾忌的向对方表达爱意，
+让对方有足够的安全感，
+让对方对我有足够的信任感，
+我考虑的那么周全，
+却没想到，
+我喜欢的人，
+总希望我像对待别人那样渣。''')
+
+#2-25 学习心得
+
+#扑克牌
+class Poker:
+    def __init__(self, colour, num):
+        self.colour = colour
+        self.num = num
+
+    def play(self):
+        print(f"打出一张{self.colour}{self.num}")
+
+p = Poker("黑桃", "A")
+p.play()
+
+#水果
+class Fruit:
+    def __init__(self,kind,weight):
+        self.kind = kind
+        self.weight = weight
+    def introduce(self):
+        print(f"这是一个{self.weight}的{self.kind}")
+fruit = Fruit("苹果","30g")
+fruit.introduce()
+
+#成绩单
+class SchoolReport:
+    def __init__(self,report):
+        self.report = report
+    def MaxScore(self):
+        return max (self.report)
+Class1 = SchoolReport([81, 76, 69, 66, 62, 87, 90, 89])
+print (Class1.MaxScore())
+
+#小狗
+class Dog:
+    def __init__(self,name,age):
+        self.name = name
+        self.age = age
+    def get_information(self):
+        print(f"{self.name}是一条{self.age}岁的狗")
+    def sit(self):
+        print(f"{self.name}蹲下了")
+    def roll_over(self):
+        print(f"{self.name}正在打滚")
+
+my_dog = Dog('Judy',2)
+my_dog.get_information()
+my_dog.sit()
+my_dog.roll_over()
+
+#餐厅正在营业
+class restaurant:
+    def __init__(self, restaurant_name, cuisine_type):
+        self.restaurant_name = restaurant_name
+        self.cuisine_type = cuisine_type
+
+    def describe_restaurant(self):
+        print(f"餐馆的名字是{self.restaurant_name}")
+        print(f"餐馆的主营菜系是{self.cuisine_type}")
+
+    def open_restaurant(self):
+        print("餐馆正在营业中")
+
+
+rtr = restaurant("全聚德", "烤鸭")
+rtr.describe_restaurant()
+rtr.open_restaurant()
+
+#漂亮的E
+number =[8, 1, 1, 8, 1, 1, 8]
+for i in number:
+    print (i * "5")
+
+#关于电脑
+class Computer:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def computer_brand(self):
+        print(self.brand)
+
+
+class Mac(Computer):
+    def __init__(self, type):
+        self.brand = "Mac"
+        self.type = type
+
+    def computer_type(self):
+        print(self.type)
+
+
+mycomputer = Mac("MacBook Air")
+mycomputer.computer_brand()
+mycomputer.computer_type()
+
+#矩形
+class rectangle:
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        print(self.length * self.width)
+
+
+class square(rectangle):
+    def __init__(self, length):
+        self.length = length
+        self.width = length
+
+f1 = rectangle(4, 6)
+f1.area()
+f2 = square(5)
+f2.area()
+
+# 手机系统
+class OS:
+    def __init__(self, brand):
+        self.brand = brand
+
+    def introduce(self):
+        print(self.brand)
+
+
+class IOS:
+    def __init__(self, version):
+        self.brand = "IOS"
+        self.version = version
+
+    def introduce(self):
+        print(self.brand + self.version)
+
+
+PhoneA = OS('Android')
+PhoneA.introduce()
+PhoneB = IOS('13')
+PhoneB.introduce()
+
+#类的灵活运用
+class school:
+    def __init__(self, name, address):
+        self.name = name
+        self.address = address
+
+    def introduce(self):
+        print(f"{self.name}在{self.address}")
+
+sch = school("衡水中学", "河北")
+sch.introduce()
+
+#上学打卡
+class student:
+    def __init__(self, name):
+        self.name = name
+
+    def print_name(self):
+        print(f"{self.name}打卡成功")
+
+tony = student("Tony")
+tony.print_name()
+
+#Tony的平均分和最高分
+class student:
+    def __init__(self, score):
+        self.score = score
+
+    def Average(self):
+        sum = 0
+        for i in self.score:
+            sum = sum + i
+        print(f"平均分为{sum / len(self.score)}")
+
+    def HighestScore(self):
+        print(f"最高分为{max(self.score)}")
+
+
+Tony = student([80, 77, 92])
+Tony.Average()
+Tony.HighestScore()
+
+#储存汽车信息
+class Car():
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+
+    def get_descriptive_name(self):
+        long_name = str(self.year) + ' ' + self.make + ' ' + self.model
+        return long_name
+
+my_car = Car('Audi', 'A6L', 2019)
+print(my_car.get_descriptive_name())
+
+# make shirt
+def make_shirt(word, size):
+    print(f'一件印有{word}的{size}码衣服')
+
+make_shirt("夜曲编程", "XL")
+make_shirt("I love python", "L")
+
+# make shirt 衣服
+class shirt:
+    def __init__(self, word, size):
+        self.word = word
+        self.size = size
+
+    def make_shirt(self):
+        print(f"一件印有{self.word}的{self.size}码衣服")
+
+
+cloth1 = shirt("夜曲编程", "XL")
+cloth1.make_shirt()
+cloth2 = shirt("I love python", "L")
+cloth2.make_shirt()
+
+#使用函数计算加减乘除
+def add(num1,num2):
+    result = num1 + num2
+    return result
+
+def subtract(num1,num2):
+    result = num1 - num2
+    return result
+
+def multiply(num1,num2):
+    result = num1 * num2
+    return result
+
+def divide(num1,num2):
+    result = num1 / num2
+    return result
+
+print (add(34,32))
+print(subtract(34,32))
+print(multiply(34,32))
+print(divide(34,32))
+
+#城市-国家
+def city_country(city,country):
+    return (f"{city},{country}")
+
+print (city_country("Beijing","China"))
+print (city_country("Tokyo","Japan"))
+
+# 用class输出城市-国家
+class city:
+    def __init__(self, city, country):
+        self.city = city
+        self.country = country
+
+    def run(self):
+        return (f"{self.city}, {self.country}")
+
+Beijing = city("Beijing", "China")
+print(Beijing.run())
+Tokyo = city("Tokyo", "Japan")
+print(Tokyo.run())
+
+#钱钱钱
+def combination(n):
+    OneHundred = n // 100
+    Fifty = (n % 100) // 50
+    Twenty = (n % 50) // 20
+    Ten = (n - OneHundred * 100 - Fifty * 50 - Twenty * 20) // 10
+    Five = (n % 10) // 5
+    One = n % 5
+    print(f"百元{OneHundred}张，五十元{Fifty}张，二十元{Twenty}张，十元{Ten}张，五元{Five}张，一元{One}张")
+
+combination(186)
+combination(487)
+
+#计算周薪
+def weekly_wage(HourlyWage, Hour, StandardHours):
+    if Hour <= StandardHours:
+        return HourlyWage * Hour
+    else:
+        return (HourlyWage * StandardHours + 1.5 * HourlyWage * (Hour - StandardHours))
+
+print(int(weekly_wage(10, 40, 35)))
+print(int(weekly_wage(20, 35, 35)))
+
+#引入代码
+import datetime
+today = datetime.date.today()
+year = today.year
+print (year == 2021)
+
+#引入某个具体的值
+from datetime import date
+today = date.today()
+year = today.year
+print (year == 2021)
+
+#math模块 sqrt:开平方  fabs:绝对值
+import math
+print (math.sqrt(100))
+print (math.fabs(-0.03))
+
+# from ... import 方法
+from math import sqrt
+from math import fabs
+print (sqrt(100))
+print (fabs(-0.03))
+
+# 引用math所有函数
+from math import *
+print (sqrt(100))
+print (fabs(-0.03))
+
+#判断三角形
+a = 4
+b = 1
+c = 4
+
+if a + b > c and a + c > b and b + c > a:
+    if a == b == c:
+        print("等边三角形")
+    if a == b or a == c or b == c:
+        print("等腰三角形")
+    if a != b and a != c and b != c:
+        print("普通三角形")
+
+if not (a + b > c and a + c > b and b + c > a):
+    print("不能构成三角形")
+
+#求最大值
+n = [3, 7, 5, 9, 1]
+print(max(n))
+
+#有多少同学
+n = 0
+
+while True:
+    if n % 5 == 1 and n % 6 == 5 and n % 7 == 4 and n % 11 == 10:
+        print (n)
+        break
+    n = n + 1
+
