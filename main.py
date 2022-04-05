@@ -386,3 +386,35 @@ print (num)
 #简单方法
 n = 'sjdkfjjdskhsjk'
 print (len(n))
+
+
+#2月16日 学习心得
+
+
+pida = lambda x:x*2
+print (pida(3))
+
+#我最喜欢的书
+def favorite_book(title):
+    print (f"My favorite book is {title}")
+
+favorite_book('Harry Potter')
+
+#计算5！
+def factorial(num):
+    result = 1
+    while num > 0:
+        result = result * num
+        num = num - 1
+    return result
+
+print (factorial(5))
+
+#计算汇率
+dollar = lambda x:x/6.681
+pound = lambda x:x/8.8162
+yen = lambda x:x/0.06052
+
+print (dollar(10000))
+print (pound(10000))
+print (yen(10000))
